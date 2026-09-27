@@ -123,7 +123,7 @@ questions.forEach(function(question, questionIndex) {
 
             /* Show score */
 
-            scoreText.textContent = `you scored ${score}/6 😋`;
+            scoreText.textContent = `you scored ${score}/6 `;
 
 
             /* Final message */
@@ -131,21 +131,21 @@ questions.forEach(function(question, questionIndex) {
             if (score === 6) {
 
                 finalMessage.textContent =
-                    "you are a certified yearner";
+                    "ur just like me";
 
             }
 
             else if (score >= 4) {
 
                 finalMessage.textContent =
-                    "pretty yearnful ngl";
+                    "pretty yearnful i guess";
 
             }
 
             else {
 
                 finalMessage.textContent =
-                    "you have much to learn about yearning";
+                    "ok bud";
 
             }
 
