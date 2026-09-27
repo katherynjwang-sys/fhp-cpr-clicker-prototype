@@ -1,5 +1,5 @@
 const questions = document.querySelectorAll(".question");
-const resetButton = document.getElementById("reset-quiz");
+const resetButtons = document.querySelectorAll(".reset-quiz");
 
 const results = document.querySelector(".results");
 const scoreText = document.getElementById("score");
@@ -57,7 +57,7 @@ questions.forEach(function(question, questionIndex) {
 
                 answer.classList.add("correct");
 
-                feedback.textContent = "correct!! 😋";
+                feedback.textContent = "CORRECT 😋";
                 feedback.classList.add("correct");
 
             }
@@ -69,11 +69,11 @@ questions.forEach(function(question, questionIndex) {
 
                 answer.classList.add("incorrect");
 
-                feedback.textContent = "flop 🧌";
+                feedback.textContent = "incorrect 😔";
                 feedback.classList.add("incorrect");
 
 
-                /* Highlight correct answer */
+                /* Show correct answer */
 
                 answers.forEach(function(button) {
 
@@ -86,7 +86,7 @@ questions.forEach(function(question, questionIndex) {
             }
 
 
-            /* SHOW NEXT */
+            /* Show Next button */
 
             nextButton.style.display = "block";
 
@@ -115,12 +115,18 @@ questions.forEach(function(question, questionIndex) {
                 question.classList.remove("active");
             });
 
+
             /* Show results */
 
             results.style.display = "block";
 
+
+            /* Show score */
+
             scoreText.textContent = `you scored ${score}/6 😋`;
 
+
+            /* Final message */
 
             if (score === 6) {
 
@@ -150,52 +156,64 @@ questions.forEach(function(question, questionIndex) {
 });
 
 
-/* RESET QUIZ */
+/* RESET BUTTONS */
 
-resetButton.addEventListener("click", function() {
+resetButtons.forEach(function(resetButton) {
 
-    score = 0;
-    currentQuestion = 0;
+    resetButton.addEventListener("click", function() {
 
+        /* Reset score */
 
-    /* Hide results */
+        score = 0;
 
-    results.style.display = "none";
-
-
-    /* Reset every question */
-
-    questions.forEach(function(question) {
-
-        const answers = question.querySelectorAll(".answer");
-        const feedback = question.querySelector(".feedback");
-        const nextButton = question.querySelector(".next-button");
+        currentQuestion = 0;
 
 
-        answers.forEach(function(button) {
+        /* Hide results */
 
-            button.disabled = false;
+        results.style.display = "none";
 
-            button.classList.remove("correct");
-            button.classList.remove("incorrect");
+
+        /* Reset every question */
+
+        questions.forEach(function(question) {
+
+            const answers = question.querySelectorAll(".answer");
+            const feedback = question.querySelector(".feedback");
+            const nextButton = question.querySelector(".next-button");
+
+
+            /* Enable answers again */
+
+            answers.forEach(function(button) {
+
+                button.disabled = false;
+
+                button.classList.remove("correct");
+                button.classList.remove("incorrect");
+
+            });
+
+
+            /* Clear feedback */
+
+            feedback.textContent = "";
+
+            feedback.classList.remove("correct");
+            feedback.classList.remove("incorrect");
+
+
+            /* Hide Next */
+
+            nextButton.style.display = "none";
 
         });
 
 
-        feedback.textContent = "";
+        /* Go back to question 1 */
 
-        feedback.classList.remove("correct");
-        feedback.classList.remove("incorrect");
-
-
-        nextButton.style.display = "none";
+        showQuestion(0);
 
     });
 
-
-    /* Go back to question 1 */
-
-    showQuestion(0);
-
 });
-
