@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,132 +18,128 @@
 
         <div class="quiz-content">
 
-            <h1>pop quiz 🤓</h1>
+            <h1>pop quiz </h1>
 
-            <p class="subtitle">how well do you yearn?</p>
 
-            <div class="question">
+            <!-- Question 1 -->
+            <div class="question active" data-answer="C">
 
-                <h2>1. who is this?</h2>
+                <p class="question-number">question 1 of 6</p>
+
+                <h2>who is this?</h2>
 
                 <img src="bo.png" alt="Bo Bragason">
 
-                <label>
-                    <input type="radio" name="q1">
-                    <span>A. idk</span>
-                </label>
+                <button class="answer" data-choice="A">A. idk</button>
+                <button class="answer" data-choice="B">B. katheryn</button>
+                <button class="answer" data-choice="C">C. bo bragason</button>
+                <button class="answer" data-choice="D">D. santa claus</button>
 
-                <label>
-                    <input type="radio" name="q1">
-                    <span>B. katheryn</span>
-                </label>
+                <p class="feedback"></p>
 
-                <label>
-                    <input type="radio" name="q1">
-                    <span>C. bo bragason</span>
-                </label>
-
-                <label>
-                    <input type="radio" name="q1">
-                    <span>D. santa claus</span>
-                </label>
+                <button class="next-button">Next →</button>
 
             </div>
 
-            <div class="question">
+            <!-- Question 2 -->
+            <div class="question" data-answer="ABC">
 
-                <h2>2. what does katheryn do in her freetime?</h2>
+                <p class="question-number">question 2 of 6</p>
 
-                <label>
-                    <input type="radio" name="q2">
-                    <span>A. yearn</span>
-                </label>
+                <h2>what does katheryn do in her freetime?</h2>
 
-                <label>
-                    <input type="radio" name="q2">
-                    <span>B. yearn</span>
-                </label>
+                <button class="answer" data-choice="A">A. yearn</button>
+                <button class="answer" data-choice="B">B. yearn</button>
+                <button class="answer" data-choice="C">C. yearn</button>
+                <button class="answer" data-choice="D">D. omg im not that yearnful</button>
 
-                <label>
-                    <input type="radio" name="q2">
-                    <span>C. yearn</span>
-                </label>
+                <p class="feedback"></p>
 
-                <label>
-                    <input type="radio" name="q2">
-                    <span>D. omg im not that yearnful</span>
-                </label>
+                <button class="next-button">Next →</button>
 
             </div>
 
-            <div class="question">
+            <!-- Question 3 -->
+            <div class="question" data-answer="A">
 
-                <h2>3. do you yearn?</h2>
+                <p class="question-number">question 3 of 6</p>
 
-                <label>
-                    <input type="radio" name="q3">
-                    <span>True</span>
-                </label>
+                <h2>do you yearn?</h2>
 
-                <label>
-                    <input type="radio" name="q3">
-                    <span>False</span>
-                </label>
+                <button class="answer" data-choice="A">True</button>
+                <button class="answer" data-choice="B">False</button>
 
-            </div>
+                <p class="feedback"></p>
 
-            <div class="question">
-
-                <h2>4. have you yearned?</h2>
-
-                <label>
-                    <input type="radio" name="q4">
-                    <span>True</span>
-                </label>
-
-                <label>
-                    <input type="radio" name="q4">
-                    <span>False</span>
-                </label>
+                <button class="next-button">Next →</button>
 
             </div>
 
-            <div class="question">
+            <!-- Question 4 -->
+            <div class="question" data-answer="A">
 
-                <h2>5. will you yearn?</h2>
+                <p class="question-number">question 4 of 6</p>
 
-                <label>
-                    <input type="radio" name="q5">
-                    <span>True</span>
-                </label>
+                <h2>have you yearned?</h2>
 
-                <label>
-                    <input type="radio" name="q5">
-                    <span>False</span>
-                </label>
+                <button class="answer" data-choice="A">True</button>
+                <button class="answer" data-choice="B">False</button>
 
-            </div>
+                <p class="feedback"></p>
 
-            <div class="question">
-
-                <h2>6. when will you yearn?</h2>
-
-                <label>
-                    <input type="radio" name="q6">
-                    <span>yes</span>
-                </label>
+                <button class="next-button">Next →</button>
 
             </div>
 
-            <p id="result"></p>
+            <!-- Question 5 -->
+            <div class="question" data-answer="A">
 
-            <button id="reset-quiz" class="reset-button">
-                Reset quiz
-            </button>
+                <p class="question-number">question 5 of 6</p>
 
-            <a href="../index.html" class="home-button">
-                Home
-            </a>
+                <h2>will you yearn?</h2>
+
+                <button class="answer" data-choice="A">True</button>
+                <button class="answer" data-choice="B">False</button>
+
+                <p class="feedback"></p>
+
+                <button class="next-button">Next →</button>
+
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question" data-answer="A">
+
+                <p class="question-number">question 6 of 6</p>
+
+                <h2>when will you yearn?</h2>
+
+                <button class="answer" data-choice="A">yes</button>
+
+                <p class="feedback"></p>
+
+                <button class="next-button">See Results →</button>
+
+            </div>
+
+            <!-- Results -->
+            <div class="results">
+
+                <h2>quiz complete 😋</h2>
+
+                <p id="score"></p>
+
+                <p id="final-message"></p>
+
+                <button id="reset-quiz" class="reset-button">
+                    Reset Quiz
+                </button>
+
+                <a href="../index.html" class="home-button">
+                    Home
+                </a>
+
+            </div>
 
         </div>
 
@@ -155,4 +150,4 @@
 </body>
 
 </html>
-```
+
