@@ -57,7 +57,7 @@ questions.forEach(function(question, questionIndex) {
 
                 answer.classList.add("correct");
 
-                feedback.textContent = "CORRECT 😋";
+                feedback.textContent = "yes!! 😋";
                 feedback.classList.add("correct");
 
             }
@@ -69,7 +69,7 @@ questions.forEach(function(question, questionIndex) {
 
                 answer.classList.add("incorrect");
 
-                feedback.textContent = "incorrect 😔";
+                feedback.textContent = "ur a flop 🧌";
                 feedback.classList.add("incorrect");
 
 
