@@ -15,6 +15,9 @@ body {
     align-items: center;
 }
 
+
+/* BIG STAR */
+
 .quiz-container {
     width: 750px;
     min-height: 750px;
@@ -27,14 +30,14 @@ body {
 }
 
 .star {
-    position: fixed;
+    position: absolute;
 
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%) scaleX(1.15);
 
-    font-size: 950px;
+    font-size: 900px;
     line-height: 1;
 
     color: white;
@@ -44,6 +47,9 @@ body {
     pointer-events: none;
 }
 
+
+/* MAIN CONTENT */
+
 .quiz-content {
     position: relative;
     z-index: 1;
@@ -51,8 +57,6 @@ body {
     width: 500px;
 
     text-align: center;
-
-    padding: 50px 0;
 }
 
 h1 {
@@ -65,13 +69,17 @@ h1 {
     margin: 0 0 25px 0;
 }
 
+
+/* QUESTION CARD */
+
 .question {
     display: none;
 
     background: #b58bd4;
-    border-radius: 20px;
 
-    padding: 25px;
+    border-radius: 24px;
+
+    padding: 28px;
 
     text-align: center;
 }
@@ -80,33 +88,48 @@ h1 {
     display: block;
 }
 
+
+/* QUESTION TEXT */
+
 .question-number {
-    font-size: 16px;
-    margin: 0 0 15px 0;
+    font-size: 15px;
+
+    margin: 0 0 12px 0;
+
+    opacity: 0.7;
 }
 
 .question h2 {
     font-size: 25px;
+
     margin: 0 0 20px 0;
 }
+
+
+/* BO PICTURE */
 
 .question img {
     display: block;
 
     width: 230px;
-    max-width: 100%;
 
     margin: 0 auto 20px auto;
 
-    border-radius: 12px;
+    border-radius: 18px;
 }
+
+
+/* ANSWER BUTTONS */
 
 .answer {
     display: block;
 
     width: 100%;
 
-    padding: 13px 18px;
+    box-sizing: border-box;
+
+    padding: 14px 18px;
+
     margin: 10px 0;
 
     font-family: Georgia, serif;
@@ -115,38 +138,56 @@ h1 {
     text-align: left;
 
     background: white;
-    color: black;
+    color: #333;
 
-    border: none;
-    border-radius: 12px;
+    border: 2px solid transparent;
+    border-radius: 16px;
 
     cursor: pointer;
 
-    transition: transform 0.15s;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        border 0.15s ease;
 }
 
 .answer:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px);
+
+    background: #f7efff;
+
+    border: 2px solid #8d5eb5;
 }
 
+.answer:active {
+    transform: scale(0.98);
+}
+
+
+/* RIGHT / WRONG */
+
 .answer.correct {
-    outline: 3px solid #6aa84f;
+    background: #e4f4df;
+
+    border: 2px solid #6aa84f;
 }
 
 .answer.incorrect {
-    outline: 3px solid #cc0000;
+    background: #f8dddd;
+
+    border: 2px solid #cc6666;
 }
 
-.answer:disabled {
-    cursor: default;
-}
+
+/* FEEDBACK */
 
 .feedback {
-    min-height: 28px;
+    min-height: 25px;
 
-    margin: 18px 0 10px 0;
+    margin: 18px 0 8px 0;
 
     font-size: 19px;
+
     font-weight: bold;
 }
 
@@ -158,34 +199,43 @@ h1 {
     color: #990000;
 }
 
+
+/* NEXT BUTTON */
+
 .next-button {
     display: none;
 
-    margin: 10px auto 0 auto;
+    margin: 12px auto 0 auto;
 
-    padding: 10px 22px;
+    padding: 12px 25px;
 
     font-family: Georgia, serif;
-    font-size: 16px;
+    font-size: 17px;
 
     background: white;
-    color: black;
+    color: #333;
 
-    border: none;
-    border-radius: 10px;
+    border: 2px solid #8d5eb5;
+    border-radius: 14px;
 
     cursor: pointer;
+
+    transition: transform 0.15s ease;
 }
 
 .next-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px) scale(1.03);
 }
+
+
+/* RESULTS */
 
 .results {
     display: none;
 
     background: #b58bd4;
-    border-radius: 20px;
+
+    border-radius: 24px;
 
     padding: 40px 25px;
 
@@ -194,53 +244,53 @@ h1 {
 
 .results h2 {
     font-size: 30px;
+
     margin-top: 0;
 }
 
 #score {
     font-size: 28px;
+
     font-weight: bold;
 }
 
 #final-message {
     font-size: 20px;
-    min-height: 28px;
 }
 
-.reset-button {
-    padding: 10px 20px;
+
+/* BOTTOM BUTTONS */
+
+.bottom-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.utility-button {
+    padding: 10px 18px;
 
     font-family: Georgia, serif;
-    font-size: 16px;
+    font-size: 15px;
 
     background: white;
-    color: black;
+    color: #333;
 
-    border: none;
-    border-radius: 10px;
+    border: 2px solid #8d5eb5;
+    border-radius: 12px;
 
     cursor: pointer;
-}
-
-.reset-button:hover {
-    transform: scale(1.05);
-}
-
-.home-button {
-    display: inline-block;
-
-    margin-left: 8px;
-    padding: 10px 20px;
-
-    background: white;
-    color: black;
-
-    border-radius: 10px;
 
     text-decoration: none;
-    font-size: 16px;
+
+    transition: transform 0.15s ease;
 }
 
-.home-button:hover {
-    transform: scale(1.05);
+.utility-button:hover {
+    transform: translateY(-2px) scale(1.03);
 }
+
