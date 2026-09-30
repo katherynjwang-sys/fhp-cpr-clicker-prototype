@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>sublime peices of music</title>
+    <title>Sublime Songs</title>
 
     <link rel="stylesheet" href="songs.css">
 </head>
@@ -18,7 +18,7 @@
 
         <div class="songs-content">
 
-            <h1>top 10 most sublime songs</h1>
+            <h1>sublime songs 🎧</h1>
 
             <p class="subtitle">click one to learn more</p>
 
@@ -90,32 +90,36 @@
             </div>
 
 
-            <!-- SONG DETAILS -->
+            <!-- POPUP -->
 
             <div class="song-details" id="song-details">
 
-                <button id="back-button" class="back-button">
-                    ← back to songs
-                </button>
+                <div class="popup-box">
 
-                <img id="detail-image" src="" alt="" class="detail-image">
+                    <button id="back-button" class="back-button">
+                        × close
+                    </button>
 
-                <h2 id="detail-title"></h2>
+                    <img id="detail-image" src="" alt="" class="detail-image">
 
-                <p id="detail-artist" class="detail-artist"></p>
+                    <h2 id="detail-title"></h2>
 
-                <p id="detail-description" class="detail-description"></p>
+                    <p id="detail-artist" class="detail-artist"></p>
+
+                    <p id="detail-description" class="detail-description"></p>
 
 
-                <div class="player">
-                    <iframe
-                        id="youtube-player"
-                        src=""
-                        title="Song player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+                    <div class="player">
+                        <iframe
+                            id="youtube-player"
+                            src=""
+                            title="Song player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
                 </div>
 
             </div>
