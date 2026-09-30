@@ -1,4 +1,3 @@
-```javascript
 const songs = {
 
     kiss: {
@@ -94,26 +93,3 @@ cards.forEach(function(card) {
 
         const songID = card.dataset.song;
         const song = songs[songID];
-
-        detailImage.src = song.image;
-        detailImage.alt = song.title;
-
-        detailTitle.textContent = song.title;
-        detailArtist.textContent = song.artist;
-        detailDescription.textContent = song.description;
-
-        details.classList.add("active");
-
-    });
-
-});
-
-
-/* CLOSE SONG POPUP */
-
-backButton.addEventListener("click", function() {
-
-    details.classList.remove("active");
-
-});
-```
