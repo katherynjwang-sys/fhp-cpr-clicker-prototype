@@ -5,7 +5,6 @@ const songs = {
         artist: "Sade",
         image: "kiss-of-life.jpg",
         description: "Sade is my goat, there isn't one song i don't like that she sings. Kiss of life is really a kiss of life, its so peaceful and sublime",
-        youtube: "https://youtu.be/uEcKk2U_U7A?si=Q7H7qpUmrl81_RS7"
     },
 
     chihiro: {
@@ -13,7 +12,6 @@ const songs = {
         artist: "Billie Eilish",
         image: "chihiro.jpg",
         description: "u can't listen to chihiro and not get completely consumed by the dreaminess and ethereal instrumentals. everything in hmhas is amazing tho, it'll get u thru anything",
-        youtube: "https://www.youtube.com/watch?v=BY_XwvKogC8"
     },
 
     yesterday: {
@@ -21,7 +19,6 @@ const songs = {
         artist: "The Carpenters",
         image: "yesterday-once-more.jpg",
         description: "baba used to play this in the car when i was a child, its like family sentimental song from my childhood, i feel like crying when i listen",
-        youtube: "https://www.youtube.com/watch?v=wawbhXQX2TQ"
     },
 
     andromeda: {
@@ -29,7 +26,6 @@ const songs = {
         artist: "Weyes Blood",
         image: "andromeda.jpg",
         description: "so this is probably my favorite song ever!! its so ethereal",
-        youtube: ""
     },
 
     sanctuary: {
@@ -37,7 +33,6 @@ const songs = {
         artist: "Tamino × Mitski",
         image: "sanctuary.jpg",
         description: "tamino and mitski is like the ultiimate mashup, this is like me and lani's soul song, it put us at ease during turb scdc/track '26",
-        youtube: "https://www.youtube.com/watch?v=e2w_YtnDteo",
     },
 
     "real-life": {
@@ -45,7 +40,6 @@ const songs = {
         artist: "The Marías",
         image: "real-life.jpg",
         description: "idk it speaks to me, everytime this plays in my airpod in hedlund class i feel less terrible no matter the circumstance",
-        youtube: "https://www.youtube.com/watch?v=S51-qzfLdIc"
     },
 
     sultans: {
@@ -53,7 +47,6 @@ const songs = {
         artist: "Dire Straits",
         image: "sultans-of-swing.jpg",
         description: "guitar is so good and this is a good chill older song",
-        youtube: "https://www.youtube.com/embed/h0ffIJ7ZO4U"
     },
 
     falling: {
@@ -61,7 +54,6 @@ const songs = {
         artist: "Muse",
         image: "falling-away-with-you.jpg",
         description: "i like the guitar melody, its so beautiful, and muse in general is so good (esp older songs)",
-        youtube: "https://www.youtube.com/watch?v=KyJxckIQ51U"
     },
 
     carousel: {
@@ -69,7 +61,6 @@ const songs = {
         artist: "Laufey",
         image: "carousel.jpg",
         description: "first time i listened to a matter of time i picked carousel as my favorite (so hard to choose tho)",
-        youtube: "https://www.youtube.com/watch?v=mNr1qjm3HWg"
     },
 
     "look-on-down": {
@@ -77,7 +68,6 @@ const songs = {
         artist: "Mazzy Star",
         image: "look-on-down.jpg",
         description: "mazzy star is another artist with no songs i dislike, but this one is just another level of ethereal",
-        youtube: "https://www.youtube.com/embed/p3NZn0mA_XI"
     }
 
 };
@@ -97,7 +87,7 @@ const detailDescription = document.getElementById("detail-description");
 
 const youtubeLink = document.getElementById("youtube-link");
 
-/* OPEN SONG */
+/* OPEN SONG POPUP */
 
 cards.forEach(function(card) {
 
@@ -110,30 +100,8 @@ cards.forEach(function(card) {
         detailImage.alt = song.title;
 
         detailTitle.textContent = song.title;
-
         detailArtist.textContent = song.artist;
-
         detailDescription.textContent = song.description;
-
-
-if (song.youtube) {
-
-    const youtubeID = song.youtube.split("/embed/")[1];
-
-    youtubeLink.href = "https://www.youtube.com/watch?v=" + youtubeID;
-
-    youtubeLink.style.display = "inline-block";
-
-} else {
-
-    youtubeLink.href = "#";
-
-    youtubeLink.style.display = "none";
-
-}
-
-
-        grid.style.display = "none";
 
         details.classList.add("active");
 
@@ -142,13 +110,11 @@ if (song.youtube) {
 });
 
 
-/* BACK TO SONGS */
+/* CLOSE SONG POPUP */
 
 backButton.addEventListener("click", function() {
 
     details.classList.remove("active");
 
-    grid.style.display = "grid";
-
-
 });
+
