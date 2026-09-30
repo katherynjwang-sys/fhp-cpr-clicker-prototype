@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Songs I Like</title>
+
+    <link rel="stylesheet" href="songs.css">
+</head>
+
+<body>
+
+    <div class="songs-container">
+
+        <div class="star">★</div>
+
+        <div class="songs-content">
+
+            <h1>songs i like 🎧</h1>
+
+            <p class="subtitle">click one to learn more</p>
+
+
+            <!-- SONG GRID -->
+
+            <div class="song-grid" id="song-grid">
+
+                <button class="song-card" data-song="kiss">
+                    <img src="kiss-of-life.jpg" alt="Kiss of Life">
+                    <span>Kiss of Life</span>
+                    <small>Sade</small>
+                </button>
+
+                <button class="song-card" data-song="chihiro">
+                    <img src="chihiro.jpg" alt="CHIHIRO">
+                    <span>CHIHIRO</span>
+                    <small>Billie Eilish</small>
+                </button>
+
+                <button class="song-card" data-song="yesterday">
+                    <img src="yesterday-once-more.jpg" alt="Yesterday Once More">
+                    <span>Yesterday Once More</span>
+                    <small>The Carpenters</small>
+                </button>
+
+                <button class="song-card" data-song="andromeda">
+                    <img src="andromeda.jpg" alt="Andromeda">
+                    <span>Andromeda</span>
+                    <small>Weyes Blood</small>
+                </button>
+
+                <button class="song-card" data-song="sanctuary">
+                    <img src="sanctuary.jpg" alt="Sanctuary">
+                    <span>Sanctuary</span>
+                    <small>Tamino × Mitski</small>
+                </button>
+
+                <button class="song-card" data-song="real-life">
+                    <img src="real-life.jpg" alt="Real Life">
+                    <span>Real Life</span>
+                    <small>The Marías</small>
+                </button>
+
+                <button class="song-card" data-song="sultans">
+                    <img src="sultans-of-swing.jpg" alt="Sultans of Swing">
+                    <span>Sultans of Swing</span>
+                    <small>Dire Straits</small>
+                </button>
+
+                <button class="song-card" data-song="falling">
+                    <img src="falling-away-with-you.jpg" alt="Falling Away With You">
+                    <span>Falling Away With You</span>
+                    <small>Muse</small>
+                </button>
+
+                <button class="song-card" data-song="carousel">
+                    <img src="carousel.jpg" alt="Carousel">
+                    <span>Carousel</span>
+                    <small>Laufey</small>
+                </button>
+
+                <button class="song-card" data-song="look-on-down">
+                    <img src="look-on-down.jpg" alt="Look On Down From The Bridge">
+                    <span>Look On Down From The Bridge</span>
+                    <small>Mazzy Star</small>
+                </button>
+
+            </div>
+
+
+            <!-- SONG DETAILS -->
+
+            <div class="song-details" id="song-details">
+
+                <button id="back-button" class="back-button">
+                    ← back to songs
+                </button>
+
+                <img id="detail-image" src="" alt="" class="detail-image">
+
+                <h2 id="detail-title"></h2>
+
+                <p id="detail-artist" class="detail-artist"></p>
+
+                <p id="detail-description" class="detail-description"></p>
+
+
+                <div class="player">
+                    <iframe
+                        id="youtube-player"
+                        src=""
+                        title="Song player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+
+            <a href="../index.html" class="home-button">
+                Home
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="songs.js"></script>
+
+</body>
+
+</html>
