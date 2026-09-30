@@ -1,3 +1,4 @@
+```javascript
 const songs = {
 
     kiss: {
@@ -75,7 +76,6 @@ const songs = {
 
 const cards = document.querySelectorAll(".song-card");
 
-const grid = document.getElementById("song-grid");
 const details = document.getElementById("song-details");
 
 const backButton = document.getElementById("back-button");
@@ -85,7 +85,6 @@ const detailTitle = document.getElementById("detail-title");
 const detailArtist = document.getElementById("detail-artist");
 const detailDescription = document.getElementById("detail-description");
 
-const youtubeLink = document.getElementById("youtube-link");
 
 /* OPEN SONG POPUP */
 
@@ -117,4 +116,4 @@ backButton.addEventListener("click", function() {
     details.classList.remove("active");
 
 });
-
+```
