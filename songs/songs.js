@@ -5,7 +5,7 @@ const songs = {
         artist: "Sade",
         image: "kiss-of-life.jpg",
         description: "Sade is my goat, there isn't one song i don't like that she sings. Kiss of life is really a kiss of life, its so peaceful and sublime",
-        youtube: "https://www.youtube.com/watch?v=uEcKk2U_U7A"
+        youtube: "https://youtu.be/uEcKk2U_U7A?si=Q7H7qpUmrl81_RS7"
     },
 
     chihiro: {
