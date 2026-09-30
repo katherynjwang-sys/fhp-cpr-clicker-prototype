@@ -95,8 +95,7 @@ const detailTitle = document.getElementById("detail-title");
 const detailArtist = document.getElementById("detail-artist");
 const detailDescription = document.getElementById("detail-description");
 
-const youtubePlayer = document.getElementById("youtube-player");
-
+const youtubeLink = document.getElementById("youtube-link");
 
 /* OPEN SONG */
 
@@ -117,19 +116,21 @@ cards.forEach(function(card) {
         detailDescription.textContent = song.description;
 
 
-        if (song.youtube) {
+if (song.youtube) {
 
-            youtubePlayer.src = song.youtube;
+    const youtubeID = song.youtube.split("/embed/")[1];
 
-            youtubePlayer.style.display = "block";
+    youtubeLink.href = "https://www.youtube.com/watch?v=" + youtubeID;
 
-        } else {
+    youtubeLink.style.display = "inline-block";
 
-            youtubePlayer.src = "";
+} else {
 
-            youtubePlayer.style.display = "none";
+    youtubeLink.href = "#";
 
-        }
+    youtubeLink.style.display = "none";
+
+}
 
 
         grid.style.display = "none";
@@ -149,6 +150,5 @@ backButton.addEventListener("click", function() {
 
     grid.style.display = "grid";
 
-    youtubePlayer.src = "";
 
 });
